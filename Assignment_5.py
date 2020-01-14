@@ -11,15 +11,14 @@ print(data)
 
 seattle_data = 'GHCND:US1WAKG0038'
 
+result = []
 for measurement in data:
     if (measurement['station']) == seattle_data:
-        print(measurement['value'])
-        print(measurement['date'])
+        result.append((measurement['value']))
+        result.append((measurement['date']))
+print(result)
 
-    
-    
 
-#print(f'{station}:{(data[0]['GHCND:US1WAKG0038'])}')
 
 
 
