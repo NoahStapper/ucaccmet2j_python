@@ -16,7 +16,7 @@ for measurement in data:
     if (measurement['station']) == seattle_data:
         value_seattle.append((measurement['value']))
         date_seattle.append((measurement['date'])[5:7])
-        
+
 # weather_dic = dict(zip(date_seattle, value_seattle))
 # print(weather_dic)
 
@@ -32,6 +32,11 @@ for month in date_seattle:
         weather_dic[month] = value_seattle[i]
     i += 1
 print(weather_dic)
+
+
+with open('monthly_precipitation.json', 'w', encoding='utf8') as file:  
+    json.dump(weather_dic, file)
+
 
 
 
