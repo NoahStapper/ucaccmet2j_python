@@ -42,8 +42,12 @@ year_precipiation = sum(value_seattle)
 print(year_precipiation)
 
 
+relative_precipiation = {}
+for month in weather_dic:
+    relative_precipiation[month] = (weather_dic[month])/year_precipiation
+print(relative_precipiation)
 
-        
 
-
+with open('relative_precipitation.json', 'w', encoding='utf8') as file:  
+    json.dump(relative_precipiation, file)
 
