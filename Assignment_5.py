@@ -38,9 +38,10 @@ with open('monthly_precipitation.json', 'w', encoding='utf8') as file:
     json.dump(weather_dic, file)
 
 
+year_precipiation = sum(value_seattle)
+print(year_precipiation)
 
 
-        
 
         
 
